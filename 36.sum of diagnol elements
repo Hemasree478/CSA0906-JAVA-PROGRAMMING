@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+class diag
+{
+public static void main(String args[])
+
+{
+int arr1[][]=new int[5][5];
+int r,c,sum=0;
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter the elements of matrix&quot;);
+for(r=0;r&lt;3;r++)
+{
+for(c=0;c&lt;3;c++)
+{
+arr1[r][c]=s.nextInt();
+}
+}
+System.out.println(&quot;sum is:&quot;);
+for(r=0;r&lt;3;r++)
+{
+for(c=0;c&lt;3;c++)
+{
+if(arr1[r][r]==0)
+{
+sum=sum+arr1[r][c];
+}
+}
+}
+System.out.println(sum);
+}
+}
