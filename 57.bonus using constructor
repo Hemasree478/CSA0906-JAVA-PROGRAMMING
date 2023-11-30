@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+class employee
+{
+int sal,bon;
+String grd;
+employee(int a,String b)
+{
+sal=a;
+grd=b;
+if(grd==&quot;A&quot;)
+{
+bon=(sal*5)/100;
+System.out.println(&quot;bonus is:&quot;+bon);
+}
+if(grd==&quot;B&quot;)
+{
+bon=(sal*10)/100;
+System.out.println(&quot;bonus is:&quot;+bon);
+}
+}
+}
+class Bonus
+{
+public static void main(String args[])
+
+{
+employee e=new employee(25000,&quot;A&quot;);
+employee e1=new employee(10500,&quot;B&quot;);
+}
+}
