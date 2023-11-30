@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+class Matrixs
+{
+public static void main(String args[])
+{
+int arr1[][]=new int[3][3];
+
+int r,c;
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter the elements of matrix&quot;);
+for(r=0;r&lt;2;r++)
+{
+for(c=0;c&lt;2;c++)
+{
+arr1[r][c]=s.nextInt();
+}
+}
+System.out.println(&quot;transpose matrix is:&quot;);
+for(r=0;r&lt;2;r++)
+{
+for(c=0;c&lt;2;c++)
+{
+System.out.print(arr1[c][r]+&quot; &quot;);
+}
+System.out.println();
+}
+}
+}
