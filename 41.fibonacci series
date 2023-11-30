@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+class fibonacci
+{
+public static void main(String args[])
+{
+int n,n1=0,n2=1,n3,i;
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter nth number:&quot;);
+
+n=s.nextInt();
+System.out.println(n1+&quot;,&quot;+n2);
+for(i=1;i&lt;=n;i++)
+{
+n3=n1+n2;
+n1=n2;
+n2=n3;
+System.out.println(n3);
+}
+}
+}
