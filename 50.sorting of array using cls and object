@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.*;
+class number
+{
+int arr[]=new int[100];
+int n,i,j,t=0;
+void getdata()
+{
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter the number of elements in array:&quot;);
+n=s.nextInt();
+System.out.println(&quot;enter the elements:&quot;);
+for(i=0;i&lt;n;i++)
+{
+arr[i]=s.nextInt();
+}
+}
+void calculation()
+{
+for(i=0;i&lt;n;i++)
+{
+for(j=i+1;j&lt;n;j++)
+
+{
+if(arr[i]&gt;arr[j])
+{
+t=arr[i];
+arr[i]=arr[j];
+arr[j]=t;
+}
+}
+}
+}
+void display()
+{
+System.out.println(&quot;the sorted array is:&quot;);
+for(i=0;i&lt;n;i++)
+{
+System.out.println(arr[i]);
+}
+}
+}
+class sorting
+{
+public static void main(String args[])
+{
+number m=new number();
+m.getdata();
+m.calculation();
+m.display();
+
+}
+}
