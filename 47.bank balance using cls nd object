@@ -1,0 +1,56 @@
+import java.io.*;
+import java.util.*;
+class Bank_Account
+{
+int cusno,intialamt,totalamt;
+int depamt,withamt;
+void getdata()
+{
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter the cusno,intial ammount,total amount&quot;);
+cusno=s.nextInt();
+intialamt=s.nextInt();
+totalamt=s.nextInt();
+
+}
+void Balance()
+{
+System.out.println(&quot;Balance amount in the account is:&quot;+totalamt);
+}
+void deposit()
+{
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter the deposit amount&quot;);
+depamt=s.nextInt();
+totalamt=totalamt+depamt;
+System.out.println(&quot;Balance amount in the account is:&quot;+totalamt);
+}
+
+void withdrawal()
+{
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter the withdrawal amount:&quot;);
+withamt=s.nextInt();
+if(totalamt&lt;=500)
+{
+System.out.println(&quot;withdrawal failed due to insufficient balance&quot;);
+}
+else
+{
+totalamt=totalamt-withamt;
+System.out.println(&quot;after withdrawal balance is:&quot;+totalamt);
+
+}
+}
+}
+class account
+{
+public static void main(String args[])
+{
+Bank_Account b=new Bank_Account();
+b.getdata();
+b.Balance();
+b.deposit();
+b.withdrawal();
+}
+}
