@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+class vow
+{
+public static void main(String args[])
+{
+
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;enter the string&quot;);
+String s1=s.nextLine();
+
+char[] c = s1.toCharArray();
+int vowel=0;
+
+for (int i = 0; i &lt; s1.length(); i++) {
+
+if(s1.charAt(i)==&#39;a&#39; || s1.charAt(i)==&#39;e&#39; || s1.charAt(i)==&#39;i&#39; || s1.charAt(i)==&#39;o&#39; ||
+s1.charAt(i)==&#39;u&#39;)
+vowel++;
+}
+
+System.out.println(&quot;Vowels: &quot; + vowel);
+}
+}
