@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+class report
+{
+int reg,s1,s2,s3,s4,s5,tot,avg;
+String name;
+void getdata()
+{
+Scanner s= new Scanner(System.in);
+System.out.println(&quot;enter name:&quot;);
+String name=s.nextLine();
+System.out.println(&quot;enter reg num:&quot;);
+reg=s.nextInt();
+
+System.out.println(&quot;enter 5 sub marks:&quot;);
+s1=s.nextInt();
+s2=s.nextInt();
+s3=s.nextInt();
+s4=s.nextInt();
+s5=s.nextInt();
+}
+void calculation()
+{
+tot=s1+s2+s3+s4+s5;
+if(s1&lt;50 &amp;&amp; s2&lt;50 &amp;&amp; s3&lt;50 &amp;&amp; s4&lt;50 &amp;&amp; s5&lt;50)
+{
+
+System.out.println(&quot;failed in subject&quot;);
+}
+else
+{
+avg=tot/5;
+System.out.println(&quot;total and avg are:&quot;+tot+&quot;,&quot;+avg);
+}
+}
+void grade()
+{
+if(avg&gt;=90)
+{
+System.out.println(&quot;A+ grade&quot;);
+}
+else if(avg&gt;=80 &amp;&amp; avg&lt;90)
+{
+System.out.println(&quot;A grade&quot;);
+}
+else if(avg&gt;=70 &amp;&amp; avg&lt;80)
+{
+System.out.println(&quot;B grade&quot;);
+}
+else if(avg&gt;=60 &amp;&amp; avg&lt;70)
+{
+System.out.println(&quot;C grade&quot;);
+}
+else
+
+{
+System.out.println(&quot;E grade&quot;);
+}
+}
+}
+class studentreport
+{
+public static void main(String args[])
+{
+report r=new report();
+r.getdata();
+r.calculation();
+r.grade();
+}
+}
