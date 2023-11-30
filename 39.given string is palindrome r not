@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+class palind
+{
+public static void main(String args[])
+{
+String str=&quot;&quot;,rev= &quot;&quot;;
+Scanner s=new Scanner(System.in);
+str=s.nextLine();
+int n = str.length();`
+for (int i = (n- 1); i &gt;=0; --i)
+{
+rev = rev + str.charAt(i);
+}
+if (str.equals(rev))
+{
+System.out.println(str + &quot; is a Palindrome &quot;);
+}
+else
+{
+System.out.println(str + &quot; is not a Palindrome &quot;);
+}
+}
+}
