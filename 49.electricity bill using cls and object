@@ -1,0 +1,62 @@
+import java.io.*;
+
+import java.util.*;
+class electri_bill
+{
+String name;
+float unit,cmr,lmr,cno,amount;
+void getdata()
+{
+Scanner s=new Scanner(System.in);
+System.out.println(&quot;XYZ CURRENT BILL&quot;);
+System.out.println(&quot;chennai&quot;);
+System.out.println(&quot;enter customer name:&quot;);
+name=s.nextLine();
+System.out.println(&quot;enter customer number:&quot;);
+cno=s.nextInt();
+System.out.println(&quot;enter current month reading:&quot;);
+cmr=s.nextInt();
+System.out.println(&quot;enter last month reading:&quot;);
+lmr=s.nextInt();
+}
+void calculation()
+{
+unit=cmr-lmr;
+System.out.println(&quot;unit is:&quot;+unit);
+if(unit&lt;=100)
+{
+amount=unit*0;
+System.out.println(&quot;electric bills is:&quot;+amount);
+
+}
+else if(unit&gt;101 &amp;&amp; unit&lt;300)
+{
+amount=((unit-100)*0)+((unit-200)*2.25f);
+System.out.println(&quot;electric bills is:&quot;+amount);
+}
+else if(unit&gt;301 &amp;&amp; unit&lt;500)
+{
+amount=((unit-100)*0)+((unit-200)*2.25f)+((unit-300)*3.75f);
+System.out.println(&quot;electric bills is:&quot;+amount);
+}
+else if(unit&gt;=500)
+{
+amount=((unit-100)*0)+((unit-200)*2.25f)+((unit-300)*3.75f)+((unit-400)*5.50f);
+System.out.println(&quot;electric bills is:&quot;+amount);
+}
+else
+{
+System.out.println(&quot;no connection&quot;);
+}
+}
+}
+class bill
+{
+public static void main(String args[])
+{
+electri_bill e=new electri_bill();
+
+e.getdata();
+e.calculation();
+}
+}
